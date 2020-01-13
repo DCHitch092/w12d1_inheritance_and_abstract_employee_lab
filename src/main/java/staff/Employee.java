@@ -24,10 +24,17 @@ public abstract class Employee {
     }
 
     public double raiseSalary(double increment_value) {
-        return salary += increment_value; //might break - it did!
+
+        if (increment_value > 0 ){ return salary += increment_value; };
+
+        return salary;
     }
 
     public double payBonus(){
         return salary / 100;
     }
+
+    public void setName(String newName){
+        if (newName != null) {name = newName;}
+    };
 }
